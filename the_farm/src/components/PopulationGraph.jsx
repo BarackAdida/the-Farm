@@ -9,7 +9,7 @@ function PopulationGraph() {
   const [graphData, setGraphData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/batches")
+    fetch("https://the-farm-stib.onrender.com/batches")
       .then(res => res.json())
       .then(data => setBatchList(data))
       .catch(err => console.error(err));
@@ -18,7 +18,7 @@ function PopulationGraph() {
   useEffect(() => {
     if (batchList.length > 0) {
       const batchId = batchList[currentBatchIndex].id;
-      fetch(`http://127.0.0.1:5000/batch/${batchId}/population_graph`)
+      fetch(`https://the-farm-stib.onrender.com/batch/${batchId}/population_graph`)
         .then(res => res.json())
         .then(data => setGraphData(data))
         .catch(err => console.error(err));

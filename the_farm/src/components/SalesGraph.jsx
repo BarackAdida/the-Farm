@@ -15,7 +15,7 @@ function SalesGraph() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/sales/graph")
+    fetch("https://the-farm-stib.onrender.com/sales/graph")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error(err));

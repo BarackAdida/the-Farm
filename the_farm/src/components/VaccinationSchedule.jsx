@@ -11,7 +11,7 @@ function VaccinationSchedule({ onClose }) {
   });
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/vaccination/upcoming")
+    fetch("https://the-farm-stib.onrender.com/vaccination/upcoming")
       .then((res) => res.json())
       .then((data) => setSchedules(data));
   }, []);
@@ -22,14 +22,14 @@ function VaccinationSchedule({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://127.0.0.1:5000/vaccination/add", {
+    fetch("https://the-farm-stib.onrender.com/vaccination/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
       .then(() => {
-        fetch("http://127.0.0.1:5000/vaccination/upcoming")
+        fetch("https://the-farm-stib.onrender.com/vaccination/upcoming")
           .then((res) => res.json())
           .then((data) => setSchedules(data));
         setFormData({

@@ -10,7 +10,7 @@ const FeedRecords = () => {
   const [editFeedData, setEditFeedData] = useState(null); // stores feed being edited
 
   const fetchFeeds = async () => {
-    const res = await fetch("http://localhost:5000/feeds");
+    const res = await fetch("https://the-farm-stib.onrender.com/feeds");
     const data = await res.json();
     setFeeds(data);
   };
@@ -21,7 +21,7 @@ const FeedRecords = () => {
 
   const addFeed = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/feeds", {
+    const res = await fetch("https://the-farm-stib.onrender.com/feeds", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newFeed),
@@ -34,18 +34,18 @@ const FeedRecords = () => {
   };
 
   const useFeed = async (id) => {
-    await fetch(`http://localhost:5000/feeds/use/${id}`, { method: "POST" });
+    await fetch(`https://the-farm-stib.onrender.com/feeds/use/${id}`, { method: "POST" });
     fetchFeeds();
   };
 
   const deleteFeed = async (id) => {
-    await fetch(`http://localhost:5000/feeds/${id}`, { method: "DELETE" });
+    await fetch(`https://the-farm-stib.onrender.com/feeds/${id}`, { method: "DELETE" });
     fetchFeeds();
   };
 
   const updateFeed = async (e) => {
     e.preventDefault();
-    await fetch(`http://localhost:5000/feeds/${editFeedData.id}`, {
+    await fetch(`https://the-farm-stib.onrender.com/feeds/${editFeedData.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

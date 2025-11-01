@@ -12,7 +12,7 @@ function VaccinationAlert() {
 
   const fetchUpcomingVaccinations = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/vaccination/upcoming");
+      const response = await fetch("https://the-farm-stib.onrender.com/vaccination/upcoming");
       if (!response.ok) {
         throw new Error("Failed to fetch vaccination data");
       }

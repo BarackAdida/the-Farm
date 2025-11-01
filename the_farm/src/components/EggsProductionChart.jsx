@@ -15,7 +15,7 @@ function EggProductionChart() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/eggproduction/chartdata")
+    fetch("https://the-farm-stib.onrender.com/eggproduction/chartdata")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error(err));

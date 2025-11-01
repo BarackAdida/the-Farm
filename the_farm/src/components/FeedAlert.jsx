@@ -8,7 +8,7 @@ function FeedAlert() {
   useEffect(() => {
     const fetchFeeds = async () => {
       try {
-        const res = await fetch("http://localhost:5000/feeds");
+        const res = await fetch("https://the-farm-stib.onrender.com/feeds");
         const data = await res.json();
 
         const filtered = data.filter((f) => f.sacks_in_storage < 5);

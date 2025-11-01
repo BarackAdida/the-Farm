@@ -19,7 +19,7 @@ const Profits = () => {
 
         setError("");
         try {
-            const response = await fetch("http://127.0.0.1:5000/profits", {
+            const response = await fetch("https://the-farm-stib.onrender.com/profits", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

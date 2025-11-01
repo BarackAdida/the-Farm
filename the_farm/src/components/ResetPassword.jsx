@@ -16,7 +16,7 @@ function ResetPassword() {
     setError("");
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/reset-password", {
+      const response = await fetch("https://the-farm-stib.onrender.com/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

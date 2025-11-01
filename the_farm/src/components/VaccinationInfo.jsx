@@ -19,7 +19,7 @@ function VaccinationInfo() {
     comments: ""
   });
 
-  const BASE_URL = "http://127.0.0.1:5000";
+  const BASE_URL = "https://the-farm-stib.onrender.com";
 
   const formatDate = (dateStr) => {
     if (!dateStr) return "";

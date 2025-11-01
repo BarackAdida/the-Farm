@@ -6,7 +6,6 @@ function Expenses() {
   const [expenses, setExpenses] = useState([]);
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(false);
-  // const [showMenu, setShowMenu] = useState(null);
   const [editingExpense, setEditingExpense] = useState(null);
   const [formData, setFormData] = useState({
     date: "",
@@ -14,16 +13,14 @@ function Expenses() {
     amount_spent: "",
     description: "",
   });
-  const BASE_URL = "http://127.0.0.1:5000";
+  const BASE_URL = "https://the-farm-stib.onrender.com";
 
-  // ✅ Convert any incoming date to ISO (for HTML date input)
   const formatDate = (dateString) => {
     if (!dateString) return "";
     const date = new Date(dateString);
     return !isNaN(date) ? date.toISOString().split("T")[0] : dateString;
   };
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -31,7 +28,6 @@ function Expenses() {
     });
   };
 
-  // ✅ Create or update expense
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -41,7 +37,7 @@ function Expenses() {
         : `${BASE_URL}/expenses`;
 
       const payload = editingExpense
-        ? { id: editingExpense.id, ...formData } // Flask PATCH expects "id" in JSON body
+        ? { id: editingExpense.id, ...formData } 
         : formData;
 
       const response = await fetch(url, {

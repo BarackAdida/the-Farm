@@ -15,7 +15,7 @@ function ExpenseGraph() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/expenses/graph")
+    fetch("https://the-farm-stib.onrender.com/expenses/graph")
       .then((res) => res.json())
       .then((records) => {
         const grouped = {};
