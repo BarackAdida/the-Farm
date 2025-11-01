@@ -44,6 +44,9 @@ def create_app():
                 return fn(*args, **kwargs)
             return wrapper
         return decoder
+    @app.route('/')
+    def home():
+        return {"message": "Welcome to the farm API"}
     
     @app.route("/admin/data", methods=["GET"])
     @jwt_required()
