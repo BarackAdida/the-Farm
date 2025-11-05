@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://barackadida.github.io/the-Farm",
+  "homepage": "https://barackadida.github.io/the-Farm/the_farm/src",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

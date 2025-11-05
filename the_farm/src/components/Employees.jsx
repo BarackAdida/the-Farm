@@ -54,7 +54,7 @@ function Employees() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://127.0.0.1:5000/employeedata", {
+            const response = await fetch("https://the-farm-stib.onrender.com/employeedata", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -87,7 +87,7 @@ function Employees() {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://127.0.0.1:5000/employeeinfo", {
+            const response = await fetch("https://the-farm-stib.onrender.com/employeeinfo", {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -113,7 +113,7 @@ function Employees() {
         if (!window.confirm("Are you sure you want to delete this employee?")) return;
 
         try {
-            const response = await fetch("http://127.0.0.1:5000/employeeinfo", {
+            const response = await fetch("https://the-farm-stib.onrender.com/employeeinfo", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ id }),
