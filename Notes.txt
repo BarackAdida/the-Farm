@@ -1,2 +1,4 @@
 Smart Alerts
 ⚠️ Low feed stock
+
+Thinking of adding reports, to report any emergency
