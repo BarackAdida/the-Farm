@@ -9,10 +9,6 @@
   width: 100%;
 }
 
-.graph-container {
-  background: linear-gradient(160deg, #2e4a28, #3f5c2b);
-}
-
 .expenses-title {
   font-size: 1.5rem;
   font-weight: 700;
