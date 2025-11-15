@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f8fff4;
   font-family: "Poppins", sans-serif;
+  /* background: url("/src/assets/image1.png") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f8fff4;  */
 }
 
 .topbar {
@@ -93,73 +95,4 @@
 
 .dashboard-content.expanded {
   margin-left: 60px;
-}
-
-/* Charts Grid */
-/* .charts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-
-.charts-grid {
-  background: linear-gradient(to bottom right, #13315c, #3a6ea5);
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  color: white;
-} 
-
-button {
-  cursor: pointer;
-}
-
-.btn-outline-warning {
-  border-color: #ffdd57;
-  color: #ffdd57;
-}
-
-.btn-outline-warning:hover {
-  background-color: #ffdd57;
-  color: #2b331b;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #b7d37a;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f1f7e8;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  text-decoration: none;
-  border-left: 4px solid transparent;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
-.sidebar.closed .nav-item span {
-  display: none;
-}
-
-.sidebar.closed .nav-item {
-  justify-content: center;
-}
-
-.nav-item svg {
-  flex-shrink: 0;
 }

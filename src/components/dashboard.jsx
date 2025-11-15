@@ -14,7 +14,7 @@ import {
   Wheat,
 } from "lucide-react";
 import VaccinationAlert from "./VaccinationAlert";
-import "./componentstyles/dashboard.css";
+// import "./componentstyles/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import EggProductionChart from "./EggsProductionChart";
