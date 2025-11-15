@@ -23,6 +23,11 @@ import VaccinationSchedule from "./components/VaccinationSchedule";
 import FeedRecords from "./components/FeedRecords";
 import FeedAlert from "./components/FeedAlert";
 import ExpenseGraph from "./components/ExpenseGraph";
+import PostNews from "./components/PostNews";
+import NewsItem from "./components/NewsItem"
+import NewsList from "./components/NewsList"
+import ReadButton from "./components/SolveButton";
+import CreateUser from "./components/CreateUser";
 
 function App() {
   return (
@@ -37,6 +42,11 @@ function App() {
       <Route path="eggproductionchart" element={<EggProductionChart />} />
       <Route path="salesgraph" element={<SalesGraph />} />
       <Route path="vaccinationschedule" element={<VaccinationSchedule />} />
+      <Route path="postnews" element={<PostNews />} />
+      <Route path="newslist" element={<NewsList />} />
+      <Route path="newsitem" element={<NewsItem />} />
+      <Route path="readbutton" element={<ReadButton />} />      
+      <Route path="createuser" element={<CreateUser />} />      
 
       <Route
         path="/*"

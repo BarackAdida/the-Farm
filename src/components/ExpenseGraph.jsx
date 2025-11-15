@@ -13,6 +13,7 @@ import "./componentstyles/Expense.css";
 
 function ExpenseGraph() {
   const [data, setData] = useState([]);
+  // const [showGraph, setShowGraph] = 
 
   useEffect(() => {
     fetch("https://the-farm-backend.onrender.com/expenses/graph")
